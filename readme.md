@@ -27,3 +27,8 @@ To create a build file use
 npm run build:tailwind
 ```
 Icons from: https://www.flaticon.com/
+
+db-config.js file format:
+
+export const SUPABASE_URL = '[SUPABASE_URL]';
+export const SUPABASE_ANON_KEY = ''[ANONYMOUS_PUBLIC_KEY];

@@ -103,12 +103,12 @@ faqAccordion.forEach(function (btn) {
         let content = this.nextElementSibling
         
         // content.classList.toggle('!tw-hidden')
-        if (content.style.maxHeight === '200px') {
+        if (content.style.maxHeight === '400px') {
             content.style.maxHeight = '0px'
             content.style.padding = '0px 18px'
 
         } else {
-            content.style.maxHeight = '200px'
+            content.style.maxHeight = '400px'
             content.style.padding = '20px 18px'
         }
     })

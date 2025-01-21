@@ -650,10 +650,27 @@
 						<span>Pre-order now!</span>
 						<i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
 					</div>
-					<div class="content">
+					<div class="content tw-w-full max-w-lg tw-overflow-auto">
 						Be among the first to experience the magic of Figure Base. Transform
 						your static collection into an interactive experience that grows
 						more engaging every day.
+
+						<div class="tw-p-8 tw-rounded-lg tw-shadow-lg tw-w-full max-w-lg">
+							<h2 class="tw-text-2xl tw-font-bold tw-mb-6 tw-text-center">Payment Form</h2>
+							<form id="payment-form" class="tw-flex tw-flex-col tw-items-center tw-gap-4">
+								<div class="tw-w-full">
+									<label class="tw-text-gray-700">Name</label>
+									<input type="text" id="name" name="name" required class="tw-w-full tw-p-2 tw-border tw-border-gray-300 tw-rounded-md">
+								</div>
+								<div class="tw-w-full">
+									<label class=" tw-text-gray-700">Email</label>
+									<input type="email" id="email" name="email" required class="tw-w-full tw-p-2 tw-border tw-border-gray-300 tw-rounded-md">
+								</div>
+								<button type="submit" class="btn tw-w-500 tw-text-white tw-p-2 tw-rounded-md">
+									Proceed to Payment
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -792,5 +809,7 @@
 		referrerpolicy="no-referrer"
 	></script>
 
+	<script type="module" src="./db-config.js"></script>
+	<script type="module" src="./store-record.js"></script>
 	<script src="./index.js"></script>
 </html>
