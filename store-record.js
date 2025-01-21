@@ -1,5 +1,5 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js';
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from './db-config.js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY, STRIPE_SECRET_KEY } from './db-config.js';
 
 // Initialize Supabase client
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -7,20 +7,30 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 document.getElementById('payment-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    console.log("entered the insert api");
-
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
-    // Insert data into the customers table
-    const { data, error } = await supabase.from('customers').insert([
-        { name, email }
-    ]);
+    // Store data in session storage temporarily
+    sessionStorage.setItem('user_name', name);
+    sessionStorage.setItem('user_email', email);
 
-    if (error) {
-        alert('Error inserting data: ' + error.message);
-    } else {
-        alert('Customer added successfully!');
-        document.getElementById('payment-form').reset();
+    try {
+        const response = await fetch('/create-checkout-session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email }),
+        });
+
+        const { id } = await response.json();
+
+        if (id) {
+            const stripe = Stripe(STRIPE_SECRET_KEY);
+            await stripe.redirectToCheckout({ sessionId: id });
+        } else {
+            alert('Failed to initiate payment');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error processing payment');
     }
 });

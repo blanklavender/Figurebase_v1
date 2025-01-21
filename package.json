@@ -4,8 +4,7 @@
   "description": "**Github**: https://github.com/PaulleDemon/awesome-landing-pages",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
-    "build": "tailwindcss -i styles.css -o output.css --watch"
+    "start": "live-server"
   },
   "keywords": [],
   "author": "",
