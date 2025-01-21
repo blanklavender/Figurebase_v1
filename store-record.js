@@ -15,7 +15,7 @@ document.getElementById('payment-form').addEventListener('submit', async (e) => 
     sessionStorage.setItem('user_email', email);
 
     try {
-        const response = await fetch('/create-checkout-session', {
+        const response = await fetch('/api/create-checkout-session', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email }),
@@ -24,7 +24,7 @@ document.getElementById('payment-form').addEventListener('submit', async (e) => 
         const { id } = await response.json();
 
         if (id) {
-            const stripe = Stripe(STRIPE_SECRET_KEY);
+            const stripe = Stripe('YOUR_STRIPE_PUBLIC_KEY');
             await stripe.redirectToCheckout({ sessionId: id });
         } else {
             alert('Failed to initiate payment');
