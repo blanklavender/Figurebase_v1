@@ -32,23 +32,27 @@ Icons from: https://www.flaticon.com/
 
 ### Steps to Deploy:
 1. **Set Up Environment Variables**
-   ```sh
-   vercel env add SUPABASE_URL your_supabase_url
-   vercel env add SUPABASE_ANON_KEY your_supabase_anon_key
-   vercel env add SUPABASE_SERVICE_ROLE_KEY your_supabase_service_role_key
+ ```sh
+ vercel env add SUPABASE_URL your_supabase_url
+ vercel env add SUPABASE_ANON_KEY your_supabase_anon_key
+ vercel env add SUPABASE_SERVICE_ROLE_KEY your_supabase_service_role_key
+ ```
 
 2. **Link Project to Vercel**
   ```sh
   vercel link
+```
 
 3. **Pull Environment Variables Locally`**
   ```sh
   vercel pull
+```
 
 4. **Deploy the Project or Run it Locally**
   ```sh
   vercel dev
   vercel --prod
+```
 
 5. **Configure Supabase CORS**
-  Add your Vercel deployment URL in the Supabase Authentication → URL Configuration.
+* Add your Vercel deployment URL in the Supabase Authentication → URL Configuration.
