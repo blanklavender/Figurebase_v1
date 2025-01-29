@@ -1,3 +1,5 @@
+// Directing user to stripe payment portal
+
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -25,8 +27,8 @@ module.exports = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `${req.headers.origin}/success.html`,
-            cancel_url: `${req.headers.origin}/cancel.html`,
+            success_url: `${req.headers.origin}/pages/success.html`,
+            cancel_url: `${req.headers.origin}/pages/cancel.html`,
         });
 
         res.status(200).json({ id: session.id });
