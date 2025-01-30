@@ -114,6 +114,26 @@ faqAccordion.forEach(function (btn) {
     })
 })
 
+// For opening the pre-order accordion
+
+document.getElementById('scroll-preorder-btn').addEventListener('click', function(event) {
+    // Prevent default behavior if using an <a> tag
+    if (this.tagName.toLowerCase() === 'a') {
+      event.preventDefault();
+    }
+
+    // Scroll to the preorder section smoothly
+    const target = document.getElementById('preorder-section');
+    target.scrollIntoView({ behavior: 'smooth' });
+
+    // Open the accordion after a slight delay to ensure scrolling has started
+    setTimeout(function() {
+      const accordion = document.getElementById('preorder-accordion');
+      if (accordion && !accordion.classList.contains('active')) {
+        accordion.click(); 
+      }
+}, 350);
+})
 
 
 // ------------- reveal section animations ---------------

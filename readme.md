@@ -1,5 +1,5 @@
 
-**Github**: https://github.com/PaulleDemon/awesome-landing-pages
+**Deployed website**: https://figurebase.us/
 
 ## Usage
 
