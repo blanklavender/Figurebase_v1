@@ -1,5 +1,5 @@
 
-**Github**: https://github.com/PaulleDemon/awesome-landing-pages
+**Deployed website**: https://figurebase.us/
 
 ## Usage
 
@@ -28,7 +28,31 @@ npm run build:tailwind
 ```
 Icons from: https://www.flaticon.com/
 
-db-config.js file format:
+# Deploying Supabase Project on Vercel
 
-export const SUPABASE_URL = '[SUPABASE_URL]';
-export const SUPABASE_ANON_KEY = ''[ANONYMOUS_PUBLIC_KEY];
+### Steps to Deploy:
+1. **Set Up Environment Variables**
+ ```sh
+ vercel env add SUPABASE_URL your_supabase_url
+ vercel env add SUPABASE_ANON_KEY your_supabase_anon_key
+ vercel env add SUPABASE_SERVICE_ROLE_KEY your_supabase_service_role_key
+ ```
+
+2. **Link Project to Vercel**
+  ```sh
+  vercel link
+```
+
+3. **Pull Environment Variables Locally`**
+  ```sh
+  vercel pull
+```
+
+4. **Deploy the Project or Run it Locally**
+  ```sh
+  vercel dev
+  vercel --prod
+```
+
+5. **Configure Supabase CORS**
+* Add your Vercel deployment URL in the Supabase Authentication → URL Configuration.
