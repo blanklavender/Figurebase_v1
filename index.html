@@ -590,7 +590,7 @@
 					</span>
 				</a>
 				<a
-					href=""
+					href="mailto:contact@figurebase.us"
 					class="tw-flex tw-h-[400px] tw-w-[400px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]"
 				>
 					<div class="tw-h-[250px] tw-w-full tw-overflow-hidden tw-rounded-md">
@@ -684,7 +684,7 @@
 						id="buy-accordion"
 						class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
 					>
-						<span>Buy Developer Kit now!</span>
+						<span>Buy Developer Kit today.</span>
 						<i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
 					</div>
 					<div class="content tw-w-full max-w-lg tw-overflow-auto">
@@ -693,14 +693,14 @@
 						at launch, you'll receive a full refund for your Developer Kit.
 						<div class="tw-p-8 tw-rounded-lg tw-shadow-lg tw-w-full max-w-lg">
 							<h2 class="tw-text-2xl tw-font-bold tw-mb-6 tw-text-center">Order a developer kit today</h2>
-							<form id="payment-form" class="tw-flex tw-flex-col tw-items-center tw-gap-4">
+							<form id="kit-payment-form" class="tw-flex tw-flex-col tw-items-center tw-gap-4">
 								<div class="tw-w-full">
 									<label class="tw-text-gray-700">Name</label>
-									<input type="text" id="name" name="name" required class="tw-w-full tw-p-2 tw-border tw-border-gray-300 tw-rounded-md" style="color: black;">
+									<input type="text" id="kit-name" name="kit-name" required class="tw-w-full tw-p-2 tw-border tw-border-gray-300 tw-rounded-md" style="color: black;">
 								</div>
 								<div class="tw-w-full">
 									<label class=" tw-text-gray-700">Email</label>
-									<input type="email" id="email" name="email" required class="tw-w-full tw-p-2 tw-border tw-border-gray-300 tw-rounded-md" style="color: black;">
+									<input type="email" id="kit-email" name="kit-email" required class="tw-w-full tw-p-2 tw-border tw-border-gray-300 tw-rounded-md" style="color: black;">
 								</div>
 								<button type="submit" class="btn tw-w-500 tw-text-white tw-p-2 tw-rounded-md">
 									Buy now
@@ -853,8 +853,8 @@
 	<script type="module" src="./db-config.js"></script>
 
 	<!-- other scripts -->
-	<script type="module" src="./client.js"></script>
-	<script src="./index.js"></script>
 	<script src="https://js.stripe.com/v3/"></script>
+	<script type="module" src="./client.js"></script>
+	<script src="./index.js"></script>	
 
 </html>
