@@ -108,8 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
             alert('Error processing payment or storing data');
         } finally {
             // Reset form and refresh page
-            document.getElementById('kit-payment-form').reset();
-            location.reload();
+            // document.getElementById('kit-payment-form').reset();
+            // location.reload();
         }
     });
 });
