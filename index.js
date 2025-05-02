@@ -21,8 +21,8 @@ function onHeaderClickOutside(e) {
 function toggleHeader() {
     if (isHeaderCollapsed) {
         // collapseHeaderItems.classList.remove("max-md:tw-opacity-0")
-        collapseHeaderItems.classList.add("opacity-100",)
-        collapseHeaderItems.style.width = "60vw"
+        collapseHeaderItems.classList.add("opacity-50",)
+        collapseHeaderItems.style.width = "30vw"
         collapseBtn.classList.remove("bi-list")
         collapseBtn.classList.add("bi-x", "max-lg:tw-fixed")
         isHeaderCollapsed = false

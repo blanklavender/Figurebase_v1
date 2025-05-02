@@ -222,7 +222,7 @@ header > .collapsible-header {
 		position: fixed;
 		right: 0px;
 		flex-direction: column;
-		opacity: 0;
+		opacity: 30;
 		height: 100vh;
 		min-height: 100vh;
 		height: 100dvh;
@@ -236,6 +236,9 @@ header > .collapsible-header {
 		color: #ffffff;
 		overflow-y: auto;
 		box-shadow: 3px 0px 3px 2px #9f9f9f;
+		padding-top: 3em;
+		z-index: 1;
+        background-color: #000000ad;
 	}
 
 	.header-links {
